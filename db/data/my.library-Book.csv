@@ -1,0 +1,11 @@
+ISBN,title,author,Quantity,genre,status
+1d9b6b17-1b1b-4a8f-a8d1-3d4a8b9d9a6b,The Great Gatsby,F. Scott Fitzgerald,5,Fiction,Available
+2d9b6b17-2b2b-4b8f-a8d2-3d4a8b9d9a6b,To Kill a Mockingbird,Harper Lee,3,Fiction,OnLoan
+3d9b6b17-3b3b-4c8f-a8d3-3d4a8b9d9a6b,1984,George Orwell,4,Dystopian,Reserved
+4d9b6b17-4b4b-4d8f-a8d4-3d4a8b9d9a6b,Pride and Prejudice,Jane Austen,2,Romance,Available
+5d9b6b17-5b5b-4e8f-a8d5-3d4a8b9d9a6b,The Catcher in the Rye,J.D. Salinger,5,Fiction,OnLoan
+6d9b6b17-6b6b-4f8f-a8d6-3d4a8b9d9a6b,The Hobbit,J.R.R. Tolkien,6,Fantasy,Available
+7d9b6b17-7b7b-4g8f-a8d7-3d4a8b9d9a6b,Fahrenheit 451,Ray Bradbury,3,Dystopian,Reserved
+8d9b6b17-8b8b-4h8f-a8d8-3d4a8b9d9a6b,Moby-Dick,Herman Melville,2,Adventure,OnLoan
+9d9b6b17-9b9b-4i8f-a8d9-3d4a8b9d9a6b,The Odyssey,Homer,4,Classics,Available
+0d9b6b17-0b0b-4j8f-a8d0-3d4a8b9d9a6b,War and Peace,Leo Tolstoy,1,Historical,Reserved

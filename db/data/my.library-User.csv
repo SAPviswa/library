@@ -1,0 +1,11 @@
+username,password,email,fullName,address,phoneNumber,role
+user1,pass1,user1@example.com,John Doe,123 Main St,555-1234,User
+user2,pass2,user2@example.com,Jane Smith,456 Elm St,555-5678,User
+user3,pass3,user3@example.com,Bob Johnson,789 Oak St,555-9012,User
+user4,pass4,user4@example.com,Alice Davis,101 Maple St,555-3456,Admin
+user5,pass5,user5@example.com,Chris Wilson,202 Pine St,555-7890,User
+user6,pass6,user6@example.com,Pat Brown,303 Cedar St,555-2345,User
+user7,pass7,user7@example.com,Karen White,404 Birch St,555-6789,User
+user8,pass8,user8@example.com,Michael Green,505 Walnut St,555-1230,Admin
+user9,pass9,user9@example.com,Linda Black,606 Ash St,555-4567,User
+user10,pass10,user10@example.com,David Gray,707 Spruce St,555-8901,Me

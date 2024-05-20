@@ -1,0 +1,108 @@
+<mvc:View
+    controllerName="com.app.centrallibrary.controller.Admin"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:layout="sap.ui.layout"
+    xmlns:l="sap.ui.layout"
+>
+    <Page
+        id="adminPage"
+        title="Welcome to Admin page 👤"
+    >
+        <VBox
+            id="_IDGenVBox1"
+            class="sapUiSmallMargin"
+        >
+            <f:SimpleForm
+                id="SimpleFormChange354"
+                editable="true"
+                layout="ResponsiveGridLayout"
+                title="Admin Dashboard"
+                labelSpanXL="3"
+                labelSpanL="3"
+                labelSpanM="3"
+                labelSpanS="12"
+                adjustLabelSpan="false"
+                emptySpanXL="4"
+                emptySpanL="4"
+                emptySpanM="4"
+                emptySpanS="0"
+                columnsXL="1"
+                columnsL="1"
+                columnsM="1"
+                singleContainerFullSize="false"
+            >
+                <f:content>
+				<Label id="_IDGenLabel1" text="Active loans" />
+				<Text id="nameText" text="" />
+				<Label id="_IDGenLabel2" text="Total Books" />
+				<Text id="_IDGenText1" text="" />
+			</f:content>
+            </f:SimpleForm>
+        </VBox>
+        <Table
+            id="idBookTable"
+            mode="SingleSelectMaster"
+            alternateRowColors="true"
+            items=""
+            selectionChange="onSelectBook"
+        >
+            <headerToolbar>
+                <OverflowToolbar id="idBookTableHeader">
+                    <Title
+                        id="idTableHeaderTitle"
+                        text="Books"
+                    />
+                    <ToolbarSpacer id="idTableHeaderSpacer" />
+                    <Button
+                        id="idBtnCreate"
+                        icon="sap-icon://add"
+                        tooltip="Create Book"
+                        type="Success"
+                        press="onCreateBtnPress"
+                    />
+                </OverflowToolbar>
+            </headerToolbar>
+            <columns>
+                <Column id="idNameCol">
+                    <Title
+                        id="idTextColTitle"
+                        text="ISBN"
+                    />
+                </Column>
+                <Column id="idtitleCol">
+                    <Title
+                        id="idTitle"
+                        text="Title"
+                    />
+                </Column>
+                <Column id="idAuthorCol">
+                    <Title
+                        id="idAuthor"
+                        text="Autor"
+                    />
+                </Column>
+                <Column id="idQuanCol">
+                    <Title
+                        id="idQuanColTitle"
+                        text="Quantiy"
+                    />
+                </Column>
+                <Column id="idDesCol">
+                    <Title
+                        id="idDes"
+                        text="Genre"
+                    />
+                </Column>
+                <Column id="idstaCol">
+                    <Title
+                        id="idsta"
+                        text="Status"
+                    />
+                </Column>
+            </columns>
+        </Table>
+    </Page>
+</mvc:View>

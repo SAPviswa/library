@@ -7,7 +7,9 @@
   "private": true,
   "dependencies": {
     "@sap/cds": "^7",
-    "express": "^4"
+    "@sap/xssec": "^4.0.0",
+    "express": "^4",
+    "jspdf": "^2.5.1"
   },
   "devDependencies": {
     "@cap-js/sqlite": "^1",

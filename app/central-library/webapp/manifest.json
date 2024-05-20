@@ -28,7 +28,7 @@
     "crossNavigation": {
       "inbounds": {
         "Central-Library-display": {
-          "semanticObject": "Central-Library",
+          "semanticObject": "CentralLibrary",
           "action": "display",
           "title": "{{flpTitle}}",
           "signature": {
@@ -112,9 +112,23 @@
       "routes": [
         {
           "name": "RouteEntrance",
-          "pattern": ":?query:",
+          "pattern": "",
           "target": [
             "TargetEntrance"
+          ]
+        },
+        {
+          "name": "RouteAdmin",
+          "pattern": "Admin",
+          "target": [
+            "TargetAdmin"
+          ]
+        },
+        {
+          "name": "RouteUser",
+          "pattern": "User",
+          "target": [
+            "TargetUser"
           ]
         }
       ],
@@ -125,6 +139,20 @@
           "clearControlAggregation": false,
           "viewId": "Entrance",
           "viewName": "Entrance"
+        },
+        "TargetAdmin": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "Admin",
+          "viewName": "Admin"
+        },
+        "TargetUser": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "User",
+          "viewName": "User"
         }
       }
     },

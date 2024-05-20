@@ -1,0 +1,161 @@
+<mvc:View
+    controllerName="com.app.centrallibrary.controller.User"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:form="sap.ui.layout.form"
+    xmlns:f="sap.f"
+    xmlns:core="sap.ui.core"
+>
+    <Page
+        id="page"
+        class="background-image"
+        title="{i18n>Utitle}"
+    >
+        <VBox id="_IDGenVBox1">
+            <form:SimpleForm
+                id="SimpleFormChange354"
+                editable="true"
+                layout="ResponsiveGridLayout"
+                title="User Dashboard"
+                labelSpanXL="3"
+                labelSpanL="3"
+                labelSpanM="3"
+                labelSpanS="12"
+                adjustLabelSpan="false"
+                emptySpanXL="4"
+                emptySpanL="4"
+                emptySpanM="4"
+                emptySpanS="0"
+                columnsXL="1"
+                columnsL="1"
+                columnsM="1"
+                singleContainerFullSize="false"
+            >
+                <form:content>
+                    <Label
+                        id="_IDGenLabel1"
+                        text="Active loans"
+                    />
+                    <Text
+                        id="nameText"
+                        text=""
+                    />
+                    <Label
+                        id="_IDGenLabel2"
+                        text="Total Books"
+                    />
+                    <Text
+                        id="_IDGenText1"
+                        text=""
+                    />
+                </form:content>
+            </form:SimpleForm>
+        </VBox>
+        <f:DynamicPageHeader
+            id="idDynamicPageHeader"
+            pinnable="true"
+        >
+            <HBox
+                id="idFilterHLayout"
+                alignContent="SpaceAround"
+                width="100vw"
+            >
+                <VBox
+                    id="idAuthorFilter"
+                    class="sapUiSmallMarginEnd"
+                >
+                    <Label
+                        id="idAuthorFilterLabel"
+                        text="{i18n>ID}"
+                    />
+                    <!-- <Input
+                            id="idIDFilterValue"
+                            value=""
+                            placeholder="Enter ID"
+                        /> -->
+                    <MultiInput
+                        id="idIDFilterValue"
+                        showSuggestion="false"
+                        width="70%"
+                        showValueHelp="false"
+                        placeholder="Enter ID"
+                    />
+                </VBox>
+                <VBox
+                    id="idTitleFilter"
+                    class="sapUiSmallMarginEnd"
+                >
+                    <Label
+                        id="idFTitleFilterLabel"
+                        text="Title:"
+                    />
+                    <Input
+                        id="idTitleFilterValue"
+                        value=""
+                        placeholder="Enter Title"
+                    />
+                </VBox>
+                <VBox
+                    id="idStockFilter"
+                    class="sapUiSmallMarginEnd"
+                >
+                    <Label
+                        id="idStockFilterLabel"
+                        text="Enter Stock:"
+                    />
+                    <Input
+                        id="idStockFilterValue"
+                        value=""
+                        placeholder="Enter Stock"
+                    />
+                </VBox>
+                <VBox
+                    id="idGenreFilter"
+                    class="sapUiSmallMarginEnd"
+                >
+                    <Label
+                        id="idGenreFilterLabel"
+                        text="Genre:"
+                    />
+                    <Input
+                        id="idGenreFilterValue"
+                        value=""
+                        placeholder="Enter Genre"
+                    />
+                </VBox>
+                <VBox
+                    id="idGoButton"
+                    class="sapUiSmallMarginEnd"
+                >
+                    <Label
+                        id="idGoButtonLabel"
+                        text=""
+                    />
+                    <Button
+                        id="idGoButtonValue"
+                        text="Filter"
+                        type="Emphasized"
+                        press="onGoPress"
+                    />
+                </VBox>
+                <VBox
+                    id="idClearFilterButton"
+                    class="sapUiSmallMarginEnd"
+                >
+                    <Label
+                        id="idClearFilterButtonLabel"
+                        text=""
+                    />
+                    <Button
+                        id="idClearFilterButtonValue"
+                        text="Clear Filter"
+                        type="Emphasized"
+                        press="onClearFilterPress"
+                    />
+                </VBox>
+            </HBox>
+        </f:DynamicPageHeader>
+    </Page>
+</mvc:View>

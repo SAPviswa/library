@@ -82,14 +82,9 @@
                                 width="100%"
                                 press="onBtnClick"
                             />
-                            <!-- <Button
-                                    id="idClearFilterButtonValue"
-                                    text="Clear Filter"
-                                    type="Emphasized"
-                                    press="onClearFilterPress"
-                                /> -->
                         </HBox>
                     </VBox>
+
                 </form:content>
             </form:SimpleForm>
         </VBox>

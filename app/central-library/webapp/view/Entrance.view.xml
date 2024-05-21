@@ -9,7 +9,7 @@
 >
     <Page
         id="page"
-        class="background-image"
+        class="loginpage"
         title="{i18n>title}"
     >
         <VBox
@@ -72,7 +72,9 @@
                         <HBox
                             id="_IDGenHBox1"
                             class="btn"
+                            
                         >
+                        
                             <Button
                                 icon="sap-icon://visits"
                                 class="button"
@@ -82,6 +84,16 @@
                                 width="100%"
                                 press="onBtnClick"
                             />
+                        <ToolbarSpacer id="_IDGenToolbarSpacer1" width="20px" />    <!-- This will add a gap between the buttons -->
+                            <!-- <Button
+                                icon="sap-icon://clear-all"
+                                class="button"
+                                id="btn2"
+                                text="clear"
+                                type="Emphasized"
+                                width="100%"
+                                press="onClearFilterPress"
+                            /> -->
                         </HBox>
                     </VBox>
 

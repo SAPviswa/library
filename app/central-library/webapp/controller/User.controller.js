@@ -62,6 +62,7 @@ sap.ui.define([
     
                 // Apply the filters to the binding of the items aggregation of the table
                 oTable.getBinding("items").filter(aFilters);
+
             },
             onPress: function () {
                 // Get the router instance
@@ -69,8 +70,8 @@ sap.ui.define([
                 
                 // Navigate to the login route
                 oRouter.navTo("RouteEntrance");
-              }
-            
+              },
+              
         });
 
     }

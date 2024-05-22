@@ -1,10 +1,11 @@
 sap.ui.define([
-    "sap/ui/core/mvc/Controller"
+    "sap/ui/core/mvc/Controller",
+    "sap/ui/core/Fragment"
 ],
     /**
      * @param {typeof sap.ui.core.mvc.Controller} Controller
      */
-    function (Controller) {
+    function (Controller, Fragment) {
         "use strict";
 
         return Controller.extend("com.app.centrallibrary.controller.Entrance", {
@@ -14,7 +15,6 @@ sap.ui.define([
 
             onBtnClick: function () {
 
-                debugger
                 var oUser = this.getView().byId("user").getValue();  //get input value data in oUser variable
                 var oPwd = this.getView().byId("pwd").getValue();    //get input value data in oPwd variable
 
@@ -33,11 +33,24 @@ sap.ui.define([
                     alert("Invalid Credentials");
                 }
             },
-            // onClearFilterPress: function () {
-            //     // Clear the input fields
-            //     this.byId("user").setValue("");
-            //     this.byId("pwd").setValue("");
-            // }
-
+            onClearFilterPress: function () {
+                // Clear the input fields
+                this.byId("user").setValue("");
+                this.byId("pwd").setValue("");
+            },
+    
+            async onBtnSignup() {
+                // create dialog lazily
+                this.oDialog ??= await this.loadFragment({
+                    name: "com.app.centrallibrary.fragments.SignUpDialog"
+                });
+            
+                this.oDialog.open();
+            },
+            onCancelSignUp:function(){
+            if(this.oDialog.isOpen()){
+                this.oDialog.close()
+            }
+        }
         });
     });

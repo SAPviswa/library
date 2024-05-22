@@ -1,15 +1,16 @@
 <mvc:View controllerName="com.app.centrallibrary.controller.Admin"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns="sap.m"
+    xmlns:m="sap.m.Button"
     xmlns:f="sap.ui.layout.form"
     xmlns:layout="sap.ui.layout"
-    xmlns:l="sap.ui.layout">
+    xmlns:l="sap.ui.layout"
+    xmlns="sap.m">
     <Toolbar id="_IDGenToolbar1">
-        <Button id="_IDGenButton1" icon= "sap-icon://nav-back" press="onPress" />
-        <ToolbarSpacer id="_IDGenToolbarSpacer1"/>
+        <Button id="_IDGenButton1" icon="sap-icon://nav-back" press="onPress" />
+        <ToolbarSpacer id="_IDGenToolbarSpacer1" />
         <Title id="_IDGenTitle2" text="Welcome to Admin page 👤" />
-        <ToolbarSpacer id="_IDGenToolbarSpacer2"/>
-        <Button id="_IDGenButton2" icon= "sap-icon://bell" press="onPressbell" />
+        <ToolbarSpacer id="_IDGenToolbarSpacer2" />
+        <Button id="_IDGenButton2" icon="sap-icon://bell" press="onPressbell" />
     </Toolbar>
 
     <VBox id="_IDGenVBox1" class="sapUiSmallMargin">
@@ -18,19 +19,32 @@
                 <Label id="_IDGenLabel1" text="Active loans" />
                 <Text id="nameText" text="" />
                 <Label id="_IDGenLabel2" text="Total Books" />
-                <Text id="_IDGenText1" text="" />
+                <Text id="_IDGenText1" text="{/Book/$count}" />
             </f:content>
         </f:SimpleForm>
     </VBox>
-    <Table id="idBookTable" mode="SingleSelectMaster" alternateRowColors="true" items="" selectionChange="onSelectBook">
+    <Table id="idBookTable" mode="SingleSelectMaster" alternateRowColors="true" items="{path:'/Book',parameters:{
+                    $count:true
+                }}" selectionChange="onSelectBook">
         <headerToolbar>
             <OverflowToolbar id="idBookTableHeader">
                 <Title id="idTableHeaderTitle" text="Books" />
                 <ToolbarSpacer id="idTableHeaderSpacer" />
-                <Button id="idBtnCreate" text="Create" tooltip="Add New Book" type="Emphasized" press="onCreateBtnPress" />
-                
+
+                <VBox id="_IDGenVBox2" class="sapUiSmallMargin">
+                    <MenuButton id="_IDGenMenuButton1" text="Manage Book Stock" buttonMode="Split" useDefaultActionOnly="true" type="Emphasized">
+                        <menu>
+                            <Menu id="_IDGenMenu1" itemSelected="onMenuAction">
+                                <MenuItem id="_IDGenMenuItem1" text="Add" icon="sap-icon://add" />
+                                <MenuItem id="_IDGenMenuItem5" text="Update" icon="sap-icon://customize" />
+                            </Menu>
+                        </menu>
+                    </MenuButton>
+                </VBox>
+                <Button id="_IDGenButton02" icon="sap-icon://delete" press="onPressbell" type="Reject" />
             </OverflowToolbar>
         </headerToolbar>
+
         <columns>
             <Column id="idNameCol">
                 <Title id="idTextColTitle" text="ISBN" />
@@ -51,6 +65,17 @@
                 <Title id="idsta" text="Status" />
             </Column>
         </columns>
+        <items>
+            <ColumnListItem id="idBooksTableColListItem">
+                <cells>
+                    <Text id="idISBNColValue" text="{ISBN}" />
+                    <Text id="idTitleColValue" text="{title}" />
+                    <Text id="idAuthorColValue" text="{author}" />
+                    <Text id="idQuantityColValue" text="{Quantity}" />
+                    <Text id="idGenreColValue" text="{genre}" />
+                    <Text id="idStatusColValue" text="{status}" />
+                </cells>
+            </ColumnListItem>
+        </items>
     </Table>
-
 </mvc:View>

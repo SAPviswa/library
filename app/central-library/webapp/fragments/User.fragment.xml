@@ -1,0 +1,24 @@
+<core:FragmentDefinition
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m">
+    
+    <Dialog
+        id="myDialog"
+        title="Dialog Title"
+        afterClose="onDialogClose"
+        class="sapUiResponsivePadding--header sapUiResponsivePadding--content sapUiResponsivePadding--footer">
+        
+        <content>
+            <VBox id="_IDGenVBox1" class="sapUiSmallMargin">
+                <Text id="_IDGenText1" text="This is a dialog box."/>
+                <!-- Add other dialog content here -->
+            </VBox>
+        </content>
+
+        <beginButton>
+            <Button id="_IDGenButton1" text="Close" press="onCloseDialog"/>
+        </beginButton>
+        
+    </Dialog>
+    
+</core:FragmentDefinition>

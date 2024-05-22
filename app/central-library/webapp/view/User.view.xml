@@ -4,25 +4,29 @@
     xmlns:l="sap.ui.layout"
     xmlns:form="sap.ui.layout.form"
     xmlns:f="sap.f"
+    xmlns:u="sap.uxap"
     xmlns:core="sap.ui.core">
 
-			<Toolbar id="_IDGenToolbar1">
-				<Button id="_IDGenButton1" icon= "sap-icon://nav-back"  press="onPress" />
+    <Toolbar id="_IDGenToolbar1">
+				<Button id="_IDGenButton1" icon= "sap-icon://nav-back" press="onPress" />
 				<ToolbarSpacer id="_IDGenToolbarSpacer1"/>
 				<Title id="_IDGenTitle2" text="User Info....👤" />
 				<ToolbarSpacer id="_IDGenToolbarSpacer2"/>
                 <Button id="_IDGenButton2" icon= "sap-icon://bell" press="onPressbell" />
+                <Button id="_IDGenButton3" icon= "sap-icon://account" type="Emphasized" press="onPressbell" />
 			</Toolbar>
-            <VBox id="_IDGenVBox1" class="sapUiSmallMargin">
-        <form:SimpleForm id="SimpleFormChange354" editable="true" layout="ResponsiveGridLayout" title="User Dashboard" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false">
-            <form:content>
-                <Label id="_IDGenLabel1" text="Borrowed loans" />
-                <Text id="nameText" text="" />
-                <Label id="_IDGenLabel2" text="Return dates" />
-                <Text id="_IDGenText1" text="" />
-            </form:content>
-        </form:SimpleForm>
-    </VBox>
+            
+        <VBox id="_IDGenVBox1" class="sapUiSmallMargin">
+            <form:SimpleForm id="SimpleFormChange354" editable="true" layout="ResponsiveGridLayout" title="User Dashboard" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false">
+                <form:content>
+                    <Label id="_IDGenLabel1" text="Borrowed loans" />
+                    <Text id="nameText" text="" />
+                    <Label id="_IDGenLabel2" text="Return dates" />
+                    <Text id="_IDGenText1" text="" />
+                </form:content>
+            </form:SimpleForm>
+        </VBox>
+
     <f:DynamicPage id="idDynamicPage" headerExpanded="true">
         <f:title>
             <f:DynamicPageTitle id="idBooksListPageTitle">

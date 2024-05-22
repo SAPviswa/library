@@ -18,17 +18,17 @@ sap.ui.define([
                 var oUser = this.getView().byId("user").getValue();  //get input value data in oUser variable
                 var oPwd = this.getView().byId("pwd").getValue();    //get input value data in oPwd variable
 
-                if (oUser === "viswa" && oPwd === "viswam062") {
+                if (oUser === "viswa" && oPwd === "Password") {
                     const oRouter = this.getOwnerComponent().getRouter();
                     oRouter.navTo("RouteAdmin")
-                } 
-                else if (oUser === "user" && oPwd === "user062") {
+                }
+                else if (oUser === "Username" && oPwd === "Password") {
                     const oRouter = this.getOwnerComponent().getRouter();
                     oRouter.navTo("RouteUser")
-            } 
+                }
                 else if (oUser === "" && oPwd === "") {
-                        alert("Enter the User name and Password")
-                } 
+                    alert("Enter the User name and Password")
+                }
                 else {
                     alert("Invalid Credentials");
                 }
@@ -38,19 +38,20 @@ sap.ui.define([
                 this.byId("user").setValue("");
                 this.byId("pwd").setValue("");
             },
-    
+
             async onBtnSignup() {
                 // create dialog lazily
                 this.oDialog ??= await this.loadFragment({
                     name: "com.app.centrallibrary.fragments.SignUpDialog"
                 });
-            
+
                 this.oDialog.open();
             },
-            onCancelSignUp:function(){
-            if(this.oDialog.isOpen()){
-                this.oDialog.close()
-            }
-        }
+            onCancelSignUp: function () {
+                if (this.oDialog.isOpen()) {
+                    this.oDialog.close()
+                }
+            },
+
         });
     });

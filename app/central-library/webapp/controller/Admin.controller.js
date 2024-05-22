@@ -18,7 +18,22 @@ sap.ui.define([
                 var oRouter = sap.ui.core.UIComponent.getRouterFor(this); 
                 // Navigate to the login route
                 oRouter.navTo("RouteEntrance");
-              }
+              },
+              
+              async onPressAdd() {
+                // create dialog lazily
+                debugger
+                this.oDialog ??= await this.loadFragment({
+                    name: "com.app.centrallibrary.fragments.Add"
+                });
+
+                this.oDialog.open();
+            },
+            onCancel: function () {
+                if (this.oDialog.isOpen()) {
+                    this.oDialog.close()
+                }
+            }
         });
     }
 );

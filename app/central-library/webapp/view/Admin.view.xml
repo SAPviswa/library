@@ -35,8 +35,8 @@
                     <MenuButton id="_IDGenMenuButton1" text="Manage Book Stock" buttonMode="Split" useDefaultActionOnly="true" type="Emphasized">
                         <menu>
                             <Menu id="_IDGenMenu1" itemSelected="onMenuAction">
-                                <MenuItem id="_IDGenMenuItem1" text="Add" icon="sap-icon://add" />
-                                <MenuItem id="_IDGenMenuItem5" text="Update" icon="sap-icon://customize" />
+                                <MenuItem id="_IDGenMenuItem1" text="Add" icon="sap-icon://add"  press="onPressAdd"/>
+                                <MenuItem id="_IDGenMenuItem5" text="Update" icon="sap-icon://customize" press="onPressUpdate"/>
                             </Menu>
                         </menu>
                     </MenuButton>

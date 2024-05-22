@@ -1,0 +1,69 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:l="sap.ui.layout"
+    controllerName="com.app.centrallibrary.controller.User">
+    <Dialog id="addUpDialog" class="addnewbook" resizable="true" contentHeight="35%" contentWidth="20%">
+        <content>
+            <f:title>
+                <f:DynamicPageTitle id="idBooksListPageTitle">
+                    <f:heading>
+                        <Title id="idBooksPageHeadingTitle" text="Books Details" />
+                    </f:heading>
+                    <f:expandedContent>
+                        <Label id="idBooksListPageECL" text="Search a book" />
+                    </f:expandedContent>
+                    <f:snappedContent>
+                        <Label id="idBooksListPageESL" text="Search a book" />
+                    </f:snappedContent>
+                    <f:snappedTitleOnMobile>
+                        <Title id="idbooksListPageEST" text="Search a book" />
+                    </f:snappedTitleOnMobile>
+                </f:DynamicPageTitle>
+            </f:title>
+        </content>
+        <f:header>
+            <f:DynamicPageHeader id="idDynamicPageHeader" pinnable="true">
+                <HBox id="idFilterHLayout" alignContent="SpaceAround" width="100vw">
+                    <VBox id="idISBNFilter" class="sapUiSmallMarginEnd">
+                        <Label id="idISBNFilterLabel" text="ISBN" />
+                        <MultiInput id="idISBNFilterValue" showSuggestion="false" width="70%" showValueHelp="false" placeholder="Enter ISBN No" />
+                    </VBox>
+                    <VBox id="idTitleFilter" class="sapUiSmallMarginEnd">
+                        <Label id="idFTitleFilterLabel" text="Title:" />
+                        <Input id="idTitleFilterValue" value="{title}" placeholder="Enter title" />
+                    </VBox>
+                    <VBox id="idAuthorFilter" class="sapUiSmallMarginEnd">
+                        <Label id="idAuthorFilterLabel" text="Enter Author:" />
+                        <Input id="idAuthorFilterValue" value="{author}" placeholder="Enter author" />
+                    </VBox>
+                    <VBox id="idQuantityFilter" class="sapUiSmallMarginEnd">
+                        <Label id="idQuantityFilterLabel" text="Quantity" />
+                        <Input id="idQuantityFilterValue" value="{Quantity}" placeholder="Enter Quantity" />
+                    </VBox>
+                    <VBox id="idGenreFilter" class="sapUiSmallMarginEnd">
+                        <Label id="idGenreFilterLabel" text="Genre" />
+                        <Input id="idGenreFilterValue" value="{genre}" placeholder="Enter Genre" />
+                    </VBox>
+                    <VBox id="idGoButton" class="sapUiSmallMarginEnd">
+                        <Label id="idGoButtonLabel" text="" />
+                        <Button id="idGoButtonValue" text="Filter" type="Emphasized" press="onGoPress" />
+                    </VBox>
+                    <VBox id="idClearFilterButton" class="sapUiSmallMarginEnd">
+                        <Label id="idClearFilterButtonLabel" text="" />
+                        <Button id="idClearFilterButtonValue" text="Clear Filter" type="Emphasized" press="onClearFilterPress" />
+                    </VBox>
+                </HBox>
+            </f:DynamicPageHeader>
+        </f:header>
+    </Dialog>
+</core:FragmentDefinition>
+
+
+
+
+
+
+
+
+
+

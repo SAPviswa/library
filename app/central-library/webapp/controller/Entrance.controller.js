@@ -50,8 +50,8 @@ sap.ui.define([
             onCancelSignUp: function () {
                 if (this.oDialog.isOpen()) {
                     this.oDialog.close()
+                    // }
                 }
-            },
-
+            }
         });
     });

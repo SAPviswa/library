@@ -22,18 +22,32 @@ sap.ui.define([
               
               async onPressAdd() {
                 // create dialog lazily
-                debugger
-                this.oDialog ??= await this.loadFragment({
+                this.oDialogAdd ??= await this.loadFragment({
                     name: "com.app.centrallibrary.fragments.Add"
                 });
 
-                this.oDialog.open();
+                this.oDialogAdd.open();
             },
             onCancel: function () {
-                if (this.oDialog.isOpen()) {
-                    this.oDialog.close()
+                if (this.oDialogAdd.isOpen()) {
+                    this.oDialogAdd.close()
+                }
+            },
+            async onPressUpdate() { 
+                debugger
+                // create dialog lazily
+                this.oDialogupdate ??= await this.loadFragment({
+                    name: "com.app.centrallibrary.fragments.Update"
+                });
+
+                this.oDialogupdate.open();
+            },
+            onCancelUpdate: function () {
+                if (this.oDialogupdate.isOpen()) {
+                    this.oDialogupdate.close()
                 }
             }
         });
     }
 );
+

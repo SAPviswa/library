@@ -23,7 +23,7 @@
             </f:content>
         </f:SimpleForm>
     </VBox>
-    <Table id="idBookTable" mode="SingleSelectMaster" alternateRowColors="true" items="{path:'/Book',parameters:{
+    <Table id="idBookTable"  alternateRowColors="true" mode="MultiSelect" items="{path:'/Book',parameters:{
                     $count:true
                 }}" selectionChange="onSelectBook">
         <headerToolbar>
